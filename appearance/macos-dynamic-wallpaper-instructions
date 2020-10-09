@@ -1,0 +1,45 @@
+This is to setup mojave_os_dynamic wallpaper on linux quickly.
+Requires mojave.xml, mojave_dynamic_wallpaers.zip and Komorebi Animated Wallpaper.
+
+Download Komorebi Wallpaper app for Ubuntu
+
+If you’re using a 64-bit version of Ubuntu 16.04 LTS or above you can download the DEB package from Github. Double-click on the downloaded package to install an animated wallpaper app 
+on ubuntu and then run it normally like any other app. When you’ve set a wallpaper from the app, you can right-click anywhere on the desktop to access the Komorebi settings. It 
+features checkboxes to allow you to enable or disable certain features and a drop-down menu lets you select from a list of available wallpapers.
+
+This is basically a wallpaper of the Mojave desert, or more accurately several wallpapers. They change ever so gradually throughout the day such that it gives the impression that 
+you’re staring out into the desert for real. A bright and sunny day in the Mojave desert when you turn your PC on but by the time you’re finished with your work in the evening the 
+wallpaper changes to reflect the time of the day. This is purely a visual feature but if you’re someone who easily loses track of time, it might even be helpful.
+
+
+since the script that will be changing the wallpapers has to be fed specific file names from a specific location, it becomes important that when it tries to find a certain wallpaper 
+by name it gets that very wallpaper. This is why it is important to either zip the wallpapers we'd like and change the script to match EXACTLY. Or use the "mojave_dynamic.zip" in the 
+repo THanks goes to "thanh Tran" for the zip by the by! The zip contains 16 macOS Mojave wallpapers. in a numbered fashion. While it downloads, create a folder named wallpapers (all 
+small letters) in your Pictures directory. Do not play with the file names. Simply download the zip, extract the contents into a folder and name the folder mojave-background. Now 
+place it in the wallpapers folder. Once you do, the location path for each of the 16 wallpapers would be something like this: 
+Pictures/wallpapers/mojave-background/mojave_dynamic_*.jpg where * is any number between 1 to 16.
+
+Getting and placing the wallpapers was easy but it is the script that will change them from time to time. Since there are only 16 wallpapers and not 24, you cannot exactly have a 
+slideshow which changes wallpapers every hour throughout the day. Hence, the need for this script. mojave.xml is located in the repo. 
+
+Before using the script - 
+Remember to make a couple of changes here. Open the xml file in a text editor. It helps if text the editor can search keywords, need to find and 
+replace "thanh" in the script with username, so everywhere in the script, replace thanh with "USERNAME". 
+Save and then close the file when done.
+
+
+Set up macOS Mojave Dynamic Wallpaper
+
+Now that everything’s in place and the script has been tweaked, macOS Mojave Dynamic Wallpaper is all ready to be set up and applied to desktop. Now use the 
+mojave.xml file as wallpaper instead of an image. GNOME doesn’t allow you to do this natively, and probably no other desktop environment will. 
+However, we can do this quite easily with the GNOME Tweak Tool. (OR CHECK KDE STORE)
+It can be found in the software center after enabling the universe repository. 
+
+Or just type a couple of quick commands instead of navigating around different apps with the GUI.-
+
+sudo add-apt-repository universe
+
+sudo apt install gnome-tweak-tool
+
+The above commands are only meant for Ubuntu users. Google how to for every other Linux distro out there. 
+In any case, we have the Tweak Tool, launch it and select mojave.xml as the wallpaper. Locate this option in the Appearance section.
